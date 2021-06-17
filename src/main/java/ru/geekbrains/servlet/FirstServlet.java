@@ -19,7 +19,7 @@ public class FirstServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("New GET request");
 
-        resp.getWriter().printf("<h1>New GET product request</h1>");
+        resp.getWriter().printf("<h1>New GET product request Ok!</h1>");
         for (int i = 0; i < 10; i++)
             resp.getWriter().println(new Product("prosduct " + i, 100+i).toDispl() + ".,");
 
@@ -28,7 +28,6 @@ public class FirstServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("New POST request");
-
         resp.getWriter().printf("<h1>New POST request</h1>");
     }
 }
